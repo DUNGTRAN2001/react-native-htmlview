@@ -78,6 +78,8 @@ export default function htmlToElement(rawHtml, customOpts = {}, done) {
             {...opts.textComponentProps}
             key={index}
             style={[defaultStyle, customStyle]}
+            onTextLayout={opts.textComponentProps?.onTextLayout}
+
           >
             {entities.decodeHTML(node.data)}
           </TextComponent>
